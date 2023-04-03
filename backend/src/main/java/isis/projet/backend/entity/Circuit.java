@@ -10,6 +10,12 @@ import java.util.List;
 @Getter
 @Setter
 @NoArgsConstructor
+// Essayez les autres stratégies de mise en oeuvre de l'héritage
+// Attention : avec les 2 stratégies suivantes, on ne peut pas utiliser
+// @GeneratedValue pour la clé
+// @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+// @Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Circuit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id

@@ -22,10 +22,6 @@ INSERT INTO arret (nom, lat, lon) VALUES
     ('Faïencerie','43.61026136347053', '2.2364788227495556'),
     ('Place Jean-Jau','43.605548577991456', '2.2414236097831846');
 
-INSERT INTO circuit (horaire, arretArrivee, arretDepart) VALUES
-    ('04/04/2023',4, 1),
-    ('15/04/2023',2, 4);
-
-INSERT INTO besoin (urgent,conducteur,nbreDemandes,demandeur) VALUES
-    (true,false,2,3),
-    (false,false,1,1);
+INSERT INTO circuit (DTYPE, horaire, arret_arrivee_id, arret_depart_id) VALUES
+    ('CIRCUIT','2023-04-03',4, 1),
+    ('CIRCUIT','2023-04-15',2, 4);

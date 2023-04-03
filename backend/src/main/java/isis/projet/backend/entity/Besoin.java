@@ -8,9 +8,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 public class Besoin extends Circuit {
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Id
-    private Integer id;
+
     private Boolean urgent;
     private Boolean conducteur;
     private Integer nbreDemandes;
