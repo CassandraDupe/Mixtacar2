@@ -14,10 +14,10 @@ public class Arret {
     @Id
     private Integer id;
     private String nom;
-    private Double lat;
-    private Double lon;
-    @ManyToMany(mappedBy ="arretArrivee")
+    private String lat;
+    private String lon;
+    @OneToMany(mappedBy ="arretArrivee")
     private List<Circuit> circuitArrivee;
-    @ManyToMany(mappedBy ="arretDepart")
+    @OneToMany(mappedBy="arretDepart")
     private List<Circuit> circuitDepart;
 }

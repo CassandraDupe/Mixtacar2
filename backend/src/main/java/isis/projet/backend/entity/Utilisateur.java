@@ -22,12 +22,12 @@ public class Utilisateur {
     private List<Note> notesRecues;
     @OneToMany(mappedBy = "noteur")
     private List<Note> notesDonnees;
-     @OneToMany(mappedBy ="concerne")
-     private List<Preference> preferences;
-     @OneToMany(mappedBy ="conducteur")
-     private List<Trajet> trajet;
-     @OneToMany(mappedBy ="demandeur")
-     private List<Besoin> besoin;
+    @OneToMany(mappedBy ="concerne")
+    private List<Preference> preferences;
+    @OneToMany(mappedBy ="conducteur")
+    private List<Trajet> trajet;
+    @OneToMany(mappedBy ="demandeur")
+    private List<Besoin> besoin;
     @OneToMany(mappedBy = "recepteur")
     private List<Message> messageRecu;
     @OneToMany(mappedBy = "envoyeur")

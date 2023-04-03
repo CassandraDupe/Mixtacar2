@@ -12,10 +12,8 @@ public class Note {
     @Id
     private Integer id;
     private Integer valeur;
-
     @ManyToOne
     private Utilisateur noteur;
-
     @ManyToOne
     private Utilisateur notee;
 
