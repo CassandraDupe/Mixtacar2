@@ -13,34 +13,26 @@ public class Utilisateur {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Integer id;
-
-    @Basic
-    @Column(name = "nom")
     private String nom;
-    @Basic
-    @Column(name = "prenom")
     private String prenom;
-    @Basic
-    @Column(name = "adresse_mail")
     private String adresseMail;
-    @Basic
-    @Column(name = "mdp")
     private String mdp;
-    @Basic
-    @Column(name = "descript")
     private String descript;
-    @Basic
-    @Column(name = "preferences")
-    private Integer preferences;
     @OneToMany(mappedBy = "notee")
     private List<Note> notesRecues;
     @OneToMany(mappedBy = "noteur")
     private List<Note> notesDonnees;
-    // @OneToMany(mappedBy ="utilisateursByIdpreference")
-    // private Collection<Preference> preferenceByIdutilisateur;
-    // @OneToMany(mappedBy ="utilisateursByIdtrajet")
-    // private Collection<Trajet> trajetByIdutilisateur;
-    // @OneToMany(mappedBy ="utilisateursByIdbesoin")
-    // private Collection<Besoin> besoinByIdutilisateur;
+     @OneToMany(mappedBy ="concerne")
+     private List<Preference> preferences;
+     @OneToMany(mappedBy ="conducteur")
+     private List<Trajet> trajet;
+     @OneToMany(mappedBy ="demandeur")
+     private List<Besoin> besoin;
+    @OneToMany(mappedBy = "recepteur")
+    private List<Message> messageRecu;
+    @OneToMany(mappedBy = "envoyeur")
+    private List<Message> messageEnvoye;
+    @OneToOne
+    private Messagerie messagerie;
 
 }
