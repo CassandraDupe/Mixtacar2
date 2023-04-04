@@ -23,9 +23,12 @@ INSERT INTO arret (nom, lat, lon) VALUES
     ('Place Jean-Jau','43.605548577991456', '2.2414236097831846');
 
 INSERT INTO circuit (DTYPE, horaire, arret_arrivee_id, arret_depart_id) VALUES
-    ('CIRCUIT','2023-04-03',4, 1),
-    ('CIRCUIT','2023-04-15',2, 4);
+    ('Circuit','2023-04-03',4, 1),
+    ('Circuit','2023-04-15',2, 4);
 
 INSERT INTO circuit (DTYPE, horaire, arret_arrivee_id, arret_depart_id, urgent, conducteur, nbre_demandes, demandeur_id) VALUES
-    ('BESOIN','2023-04-03',4, 1, false, false, 1, 2),
-    ('BESOIN','2023-05-14', 3, 5, true, false, 2, 3);
+    ('Besoin','2023-04-03',4, 1, false, false, 1, 2),
+    ('Besoin','2023-05-14', 3, 5, true, false, 2, 3);
+
+INSERT INTO circuit (DTYPE, horaire, arret_arrivee_id, arret_depart_id, nbplace, conducteur_id) VALUES
+    ('Trajet', '2023-05-18', 2, 3, 1, 3);

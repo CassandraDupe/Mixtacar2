@@ -1,6 +1,6 @@
 package isis.projet.backend.controller;
 
-import isis.projet.backend.service.CountryService;
+import isis.projet.backend.service.UtilisateurService;
 import org.springframework.web.bind.annotation.*;
 import lombok.extern.slf4j.Slf4j;
 import java.util.Map;
@@ -9,10 +9,10 @@ import java.util.Map;
 @RequestMapping("/rest")
 @Slf4j
 public class SimpleController {
-    private final CountryService countryService;
+    private final UtilisateurService utilisateurService;
 
-    public SimpleController(CountryService countryService) {
-        this.countryService = countryService;
+    public SimpleController(UtilisateurService utilisateurService) {
+        this.utilisateurService = utilisateurService;
     }
 
     @GetMapping("/hello")
@@ -22,9 +22,9 @@ public class SimpleController {
     }
 
     @PutMapping("/combienDePays")
-    public Map<String, Long> combienDePays() {
+    public Map<String, Long> combienDInscrits() {
         log.info("Service combienDePays");
-        return Map.of("combien", countryService.combienDePays());
+        return Map.of("combien", utilisateurService.combienDInscrits());
     }
 }
 
