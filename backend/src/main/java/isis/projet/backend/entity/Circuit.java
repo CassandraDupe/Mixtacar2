@@ -4,7 +4,6 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.sql.Date;
-import java.util.List;
 
 @Entity
 @Getter
@@ -16,6 +15,7 @@ import java.util.List;
 // @Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 // @Inheritance(strategy = InheritanceType.JOINED)
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "DTYPE")
 public class Circuit {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
